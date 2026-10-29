@@ -1,7 +1,40 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.SpendWise" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Keep SpendWise visually consistent in dark device mode -->
+    <style name="Theme.SpendWise"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Main brand color -->
+        <item name="colorPrimary">@color/primary</item>
+
+        <!-- Light primary container -->
+        <item name="colorPrimaryContainer">@color/primary_light</item>
+
+        <!-- Text and icons shown on primary surfaces -->
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+
+        <!-- Main app background -->
+        <item name="android:colorBackground">@color/background</item>
+
+        <!-- Card and surface background -->
+        <item name="colorSurface">@color/surface</item>
+
+        <!-- Light status bar background -->
+        <item name="android:statusBarColor">@color/background</item>
+
+        <!-- Use dark status bar icons -->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Light navigation bar background -->
+        <item name="android:navigationBarColor">@color/surface</item>
+
+        <!-- Use dark navigation bar icons -->
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <!-- Default app text color -->
+        <item name="android:textColor">@color/text_primary</item>
+
     </style>
+
 </resources>

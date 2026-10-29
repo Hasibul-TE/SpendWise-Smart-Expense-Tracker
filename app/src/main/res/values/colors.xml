@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- =========================================================
+         SpendWise - Main Brand Colors
+         ========================================================= -->
+
+    <!-- Main brand color of the app -->
+    <color name="primary">#4F46E5</color>
+
+    <!-- Dark version of the primary color -->
+    <color name="primary_dark">#3730A3</color>
+
+    <!-- Light version of the primary color -->
+    <color name="primary_light">#EEF2FF</color>
+
+
+    <!-- =========================================================
+         Financial Status Colors
+         ========================================================= -->
+
+    <!-- Green color used to represent income -->
+    <color name="income_green">#16A34A</color>
+
+    <!-- Red color used to represent expenses -->
+    <color name="expense_red">#DC2626</color>
+
+    <!-- Used for warnings or important notices -->
+    <color name="warning">#F59E0B</color>
+
+
+    <!-- =========================================================
+         Background and Surface Colors
+         ========================================================= -->
+
+    <!-- Main background color of the app -->
+    <color name="background">#F8FAFC</color>
+
+    <!-- Background color for cards, dialogs, and surfaces -->
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Border color -->
+    <color name="border">#E2E8F0</color>
+
+
+    <!-- =========================================================
+         Text Colors
+         ========================================================= -->
+
+    <!-- Main heading and important text color -->
+    <color name="text_primary">#0F172A</color>
+
+    <!-- Secondary text, hint, and subtitle color -->
+    <color name="text_secondary">#64748B</color>
+
+    <!-- White text used on primary-colored buttons or surfaces -->
+    <color name="text_on_primary">#FFFFFF</color>
+
+
+    <!-- =========================================================
+         Common Colors
+         ========================================================= -->
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
 </resources>
