@@ -1,4 +1,4 @@
-package com.hasibul.spendwise;
+package com.alard.spendwise;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.hasibul.spendwise", appContext.getPackageName());
+        assertEquals("com.alard.spendwise", appContext.getPackageName());
     }
 }

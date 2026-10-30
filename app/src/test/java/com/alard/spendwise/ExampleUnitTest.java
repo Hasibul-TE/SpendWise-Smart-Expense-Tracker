@@ -1,4 +1,4 @@
-package com.hasibul.spendwise;
+package com.alard.spendwise;
 
 import org.junit.Test;
 

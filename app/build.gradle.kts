@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.hasibul.spendwise"
+    namespace = "com.alard.spendwise"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.hasibul.spendwise"
+        applicationId = "com.alard.spendwise"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

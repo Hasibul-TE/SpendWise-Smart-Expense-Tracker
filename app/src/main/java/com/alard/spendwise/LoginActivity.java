@@ -1,4 +1,4 @@
-package com.hasibul.spendwise;
+package com.alard.spendwise;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+
 
 public class LoginActivity extends AppCompatActivity {
 

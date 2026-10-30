@@ -13,23 +13,23 @@
 
         <!-- Login screen -->
         <activity
-            android:name=".LoginActivity"
+            android:name="com.alard.spendwise.LoginActivity"
             android:exported="false" />
 
         <!-- Register screen -->
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.alard.spendwise.RegisterActivity"
             android:exported="false" />
 
         <!-- Main screen opened after login  -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.alard.spendwise.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
         <!-- First screen shown when the app starts -->
         <activity
-            android:name=".SplashActivity"
+            android:name="com.alard.spendwise.SplashActivity"
             android:exported="true">
 
             <!-- Sets SplashActivity as the launcher activity -->
