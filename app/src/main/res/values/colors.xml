@@ -2,58 +2,64 @@
 <resources>
 
     <!-- =========================================================
-         SpendWise - Main Brand Colors
+         SpendWise - Brand Colors
          ========================================================= -->
 
-    <!-- Main brand color of the app -->
-    <color name="primary">#4F46E5</color>
+    <!-- Main brand blue -->
+    <color name="primary">#3B82F6</color>
 
-    <!-- Dark version of the primary color -->
-    <color name="primary_dark">#3730A3</color>
+    <!-- Darker brand blue -->
+    <color name="primary_dark">#1D4ED8</color>
 
-    <!-- Light version of the primary color -->
-    <color name="primary_light">#EEF2FF</color>
+    <!-- Lighter blue for highlights -->
+    <color name="primary_light">#60A5FA</color>
 
 
     <!-- =========================================================
          Financial Status Colors
          ========================================================= -->
 
-    <!-- Green color used to represent income -->
-    <color name="income_green">#16A34A</color>
+    <!-- Income and earnings -->
+    <color name="income_green">#22C55E</color>
 
-    <!-- Red color used to represent expenses -->
-    <color name="expense_red">#DC2626</color>
+    <!-- Expenses and costs -->
+    <color name="expense_red">#EF4444</color>
 
-    <!-- Used for warnings or important notices -->
+    <!-- Warnings and notices -->
     <color name="warning">#F59E0B</color>
 
 
     <!-- =========================================================
-         Background and Surface Colors
+         Dark Background Colors
          ========================================================= -->
 
-    <!-- Main background color of the app -->
-    <color name="background">#F8FAFC</color>
+    <!-- Main app background -->
+    <color name="background">#071739</color>
 
-    <!-- Background color for cards, dialogs, and surfaces -->
-    <color name="surface">#FFFFFF</color>
+    <!-- Cards and main surfaces -->
+    <color name="surface">#0F274F</color>
 
-    <!-- Border color -->
-    <color name="border">#E2E8F0</color>
+    <!-- Input fields and secondary surfaces -->
+    <color name="surface_secondary">#102A56</color>
+
+    <!-- Borders and separators -->
+    <color name="border">#1E3A5F</color>
 
 
     <!-- =========================================================
          Text Colors
          ========================================================= -->
 
-    <!-- Main heading and important text color -->
-    <color name="text_primary">#0F172A</color>
+    <!-- Main headings and important text -->
+    <color name="text_primary">#F8FAFC</color>
 
-    <!-- Secondary text, hint, and subtitle color -->
-    <color name="text_secondary">#64748B</color>
+    <!-- Subtitles, hints, and secondary text -->
+    <color name="text_secondary">#94A3B8</color>
 
-    <!-- White text used on primary-colored buttons or surfaces -->
+    <!-- Input field hint text -->
+    <color name="input_hint">#CBD5E1</color>
+
+    <!-- Text shown on primary buttons -->
     <color name="text_on_primary">#FFFFFF</color>
 
 

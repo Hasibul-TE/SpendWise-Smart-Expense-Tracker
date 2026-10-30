@@ -6,6 +6,8 @@
 
     <!-- Splash screen -->
     <string name="splash_title">SpendWise</string>
+    <string name="spend_text">Spend</string>
+    <string name="wise_text">Wise</string>
     <string name="splash_tagline">Track. Save. Grow.</string>
 
     <!-- Authentication -->

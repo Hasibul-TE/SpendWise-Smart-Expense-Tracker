@@ -11,7 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpendWise">
 
-        <!-- Main screen opened after the splash screen -->
+        <!-- Login screen -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Register screen -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- Main screen opened after login  -->
         <activity
             android:name=".MainActivity"
             android:exported="false"

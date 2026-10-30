@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Main theme used across the SpendWise app -->
+    <!-- Main SpendWise theme -->
     <style name="Theme.SpendWise"
         parent="Theme.Material3.DayNight.NoActionBar">
 
-        <!-- Main brand color -->
+        <!-- Brand colors -->
         <item name="colorPrimary">@color/primary</item>
-
-        <!-- Light version of the primary color -->
-        <item name="colorPrimaryContainer">@color/primary_light</item>
-
-        <!-- Text/icons shown on primary-colored surfaces -->
+        <item name="colorPrimaryContainer">@color/primary_dark</item>
         <item name="colorOnPrimary">@color/text_on_primary</item>
 
-        <!-- Main screen background color -->
+        <!-- App background -->
         <item name="android:colorBackground">@color/background</item>
 
-        <!-- Default card and surface color -->
+        <!-- Material surfaces -->
         <item name="colorSurface">@color/surface</item>
-
-        <!-- Status bar uses the same light app background -->
-        <item name="android:statusBarColor">@color/background</item>
-
-        <!-- Dark status bar icons for the light background -->
-        <item name="android:windowLightStatusBar">true</item>
-
-        <!-- Bottom navigation system bar color -->
-        <item name="android:navigationBarColor">@color/surface</item>
-
-        <!-- Dark navigation bar icons -->
-        <item name="android:windowLightNavigationBar">true</item>
+        <item name="colorSurfaceContainer">@color/surface_secondary</item>
 
         <!-- Default text color -->
         <item name="android:textColor">@color/text_primary</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/background</item>
 
     </style>
 

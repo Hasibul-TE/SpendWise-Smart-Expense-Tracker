@@ -19,11 +19,11 @@ public class SplashActivity extends AppCompatActivity {
         // Shows the splash screen layout
         setContentView(R.layout.activity_splash);
 
-        // Opens the next screen after a short delay
+        // Opens the login screen after a short delay
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
-            // MainActivity is temporary until LoginActivity is created
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            // Opens LoginActivity
+            Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
             startActivity(intent);
 
             // Prevents returning to the splash screen

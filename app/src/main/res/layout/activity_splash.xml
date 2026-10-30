@@ -11,39 +11,59 @@
         android:id="@+id/imgLogo"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:src="@mipmap/ic_launcher"
         android:contentDescription="@string/app_name"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/txtAppName"
+        app:layout_constraintBottom_toTopOf="@id/layoutAppTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <!-- App name -->
-    <TextView
-        android:id="@+id/txtAppName"
+    <!-- Two-color app title -->
+    <LinearLayout
+        android:id="@+id/layoutAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/splash_title"
-        android:textColor="@color/text_primary"
-        android:textSize="32sp"
-        android:textStyle="bold"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/imgLogo"
         app:layout_constraintBottom_toTopOf="@id/txtTagline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Short app tagline -->
+        <!-- Spend -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spend_text"
+            android:textColor="@color/text_primary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <!-- Wise -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wise_text"
+            android:textColor="@color/primary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- App tagline -->
     <TextView
         android:id="@+id/txtTagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:text="@string/splash_tagline"
         android:textColor="@color/text_secondary"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/txtAppName"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/layoutAppTitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
