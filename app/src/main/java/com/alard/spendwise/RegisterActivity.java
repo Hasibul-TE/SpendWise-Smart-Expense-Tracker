@@ -10,7 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -19,12 +20,17 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputEditText editRegisterPassword;
     private TextInputEditText editConfirmPassword;
 
+    private FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Shows the registration screen
         setContentView(R.layout.activity_register);
+
+        // Initializes Firebase Authentication
+        firebaseAuth = FirebaseAuth.getInstance();
 
         // Connects Java with the registration form
         editFullName = findViewById(R.id.editFullName);
@@ -42,8 +48,6 @@ public class RegisterActivity extends AppCompatActivity {
         txtLogin.setOnClickListener(view -> {
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(intent);
-
-            // Closes the registration screen
             finish();
         });
     }
@@ -116,11 +120,59 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        // Firebase registration will be added in Step 9
-        Toast.makeText(
-                RegisterActivity.this,
-                "Registration form is valid",
-                Toast.LENGTH_SHORT
-        ).show();
+        // Creates a Firebase account
+        registerUser(fullName, email, password);
+    }
+
+    // Creates the user account with Firebase
+    private void registerUser(String fullName, String email, String password) {
+
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(task -> {
+
+                    if (task.isSuccessful() && firebaseAuth.getCurrentUser() != null) {
+
+                        // Saves the user's name in Firebase Authentication
+                        UserProfileChangeRequest profileUpdates =
+                                new UserProfileChangeRequest.Builder()
+                                        .setDisplayName(fullName)
+                                        .build();
+
+                        firebaseAuth.getCurrentUser()
+                                .updateProfile(profileUpdates)
+                                .addOnCompleteListener(profileTask -> {
+
+                                    Toast.makeText(
+                                            RegisterActivity.this,
+                                            "Account created successfully",
+                                            Toast.LENGTH_LONG
+                                    ).show();
+
+                                    // Signs out after registration
+                                    firebaseAuth.signOut();
+
+                                    // Opens the login screen
+                                    Intent intent = new Intent(
+                                            RegisterActivity.this,
+                                            LoginActivity.class
+                                    );
+
+                                    startActivity(intent);
+                                    finish();
+                                });
+
+                    } else {
+
+                        String errorMessage = task.getException() != null
+                                ? task.getException().getMessage()
+                                : "Unable to create account";
+
+                        Toast.makeText(
+                                RegisterActivity.this,
+                                errorMessage,
+                                Toast.LENGTH_LONG
+                        ).show();
+                    }
+                });
     }
 }

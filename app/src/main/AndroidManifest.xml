@@ -21,6 +21,11 @@
             android:name="com.alard.spendwise.RegisterActivity"
             android:exported="false" />
 
+        <!-- Forgot password screen -->
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+
         <!-- Main screen opened after login  -->
         <activity
             android:name="com.alard.spendwise.MainActivity"

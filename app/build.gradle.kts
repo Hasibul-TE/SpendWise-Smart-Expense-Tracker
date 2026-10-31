@@ -1,5 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
+
+    // Connects Firebase configuration with the app
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -40,4 +43,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
+
+    // Firebase libraries use compatible versions
+    implementation(platform("com.google.firebase:firebase-bom:35.1.0"))
+
+    // Firebase Authentication
+    implementation("com.google.firebase:firebase-auth")
 }

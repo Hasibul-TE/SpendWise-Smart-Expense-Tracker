@@ -113,6 +113,20 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Forgot password link -->
+        <TextView
+            android:id="@+id/txtForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/primary_light"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
         <!-- Remember login option -->
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/checkRememberMe"
