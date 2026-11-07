@@ -1,3 +1,4 @@
+
 package com.alard.spendwise;
 
 import android.content.Intent;
@@ -7,45 +8,55 @@ import android.os.Handler;
 import android.os.Looper;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SplashActivity extends AppCompatActivity {
+public class SessionRouterActivity extends AppCompatActivity {
 
-    private static final long SPLASH_DELAY = 1800;
-
+    private static final long SPLASH_DELAY = 1800L;
     private static final String PREF_NAME = "SpendWisePrefs";
     private static final String KEY_REMEMBER_ME = "remember_me";
+
+    private final Handler mainHandler =
+            new Handler(Looper.getMainLooper());
+
+    private final Runnable routeRunnable = this::checkLoginState;
 
     private FirebaseAuth firebaseAuth;
     private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Install the AndroidX splash screen first.
+        SplashScreen splashScreen =
+                SplashScreen.installSplashScreen(this);
+
         super.onCreate(savedInstanceState);
 
-        // Shows the splash screen
-        setContentView(R.layout.activity_splash);
+        // Keep the system splash until navigation finishes.
+        splashScreen.setKeepOnScreenCondition(() -> true);
 
-        // Initializes Firebase Authentication
+        // No setContentView: avoid a second custom splash.
+
         firebaseAuth = FirebaseAuth.getInstance();
 
-        // Loads local preferences
         sharedPreferences = getSharedPreferences(
                 PREF_NAME,
                 MODE_PRIVATE
         );
 
-        // Checks login state after the splash delay
-        new Handler(Looper.getMainLooper()).postDelayed(
-                this::checkLoginState,
-                SPLASH_DELAY
-        );
+        // Preserve the existing 1800 ms delay.
+        mainHandler.postDelayed(routeRunnable, SPLASH_DELAY);
     }
 
-    // Decides which screen should open
     private void checkLoginState() {
+
+        if (isFinishing() || isDestroyed()) {
+            return;
+        }
 
         boolean rememberMe = sharedPreferences.getBoolean(
                 KEY_REMEMBER_ME,
@@ -58,26 +69,29 @@ public class SplashActivity extends AppCompatActivity {
 
         if (rememberMe && currentUser != null) {
 
-            // Keeps the user logged in
-            intent = new Intent(
-                    SplashActivity.this,
-                    MainActivity.class
-            );
+            // Open Dashboard for remembered users.
+            intent = new Intent(this, MainActivity.class);
 
         } else {
 
-            // Clears Firebase session when not remembered
+            // Clear a session that was not remembered.
             if (currentUser != null) {
                 firebaseAuth.signOut();
             }
 
-            intent = new Intent(
-                    SplashActivity.this,
-                    LoginActivity.class
-            );
+            intent = new Intent(this, LoginActivity.class);
         }
 
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        // Avoid delayed navigation after Activity destruction.
+        mainHandler.removeCallbacks(routeRunnable);
+
+        super.onDestroy();
     }
 }

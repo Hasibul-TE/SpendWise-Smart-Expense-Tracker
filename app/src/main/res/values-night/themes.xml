@@ -26,7 +26,6 @@
 
         <!-- Navigation bar -->
         <item name="android:navigationBarColor">@color/background</item>
-        <item name="android:windowLightNavigationBar">false</item>
 
         <!-- Window background -->
         <item name="android:windowBackground">@color/background</item>

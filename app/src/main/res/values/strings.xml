@@ -35,6 +35,18 @@
     <string name="expense">Expense</string>
     <string name="recent_transactions">Recent Transactions</string>
     <string name="view_all">View All</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_subtitle">Financial overview</string>
+    <string name="dashboard_subtitle_with_name">%1$s Financial overview</string>
+
+    <!-- Initial summary values -->
+    <string name="dashboard_zero_balance">৳0.00</string>
+    <string name="dashboard_zero_income">৳0.00</string>
+    <string name="dashboard_zero_expense">৳0.00</string>
+
+    <!-- Empty transaction state -->
+    <string name="no_transactions">No transactions yet</string>
+    <string name="no_transactions_hint">Add your first transaction to get started</string>
 
     <!-- Transaction -->
     <string name="add_transaction">Add Transaction</string>
@@ -66,5 +78,71 @@
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
+
+    <!-- Sync status dialog: all original text moved into translatable resources -->
+    <string name="sync_status_title">Cloud Sync Status</string>
+    <string name="sync_status_subtitle">Local transactions stay saved while uploads are pending.</string>
+    <string name="sync_status_checking">Checking local upload queue...</string>
+    <string name="sync_status_explanation">This checks pending uploads; it does not confirm that all remote data has been downloaded to this device.</string>
+    <string name="sync_status_refresh">Refresh</string>
+    <string name="sync_status_retry">Retry Upload</string>
+    <string name="sync_status_close">Close</string>
+    <string name="sync_status_request_failed">Unable to request upload</string>
+    <string name="sync_status_request_failed_details">Your locally saved transactions were not deleted. Check your sign-in and network, then retry.</string>
+    <string name="sync_status_not_signed_in">Not signed in</string>
+    <string name="sync_status_not_signed_in_details">Sign in to upload or inspect your transactions.</string>
+    <string name="sync_status_queue_unavailable">Cannot read sync queue</string>
+    <string name="sync_status_queue_unavailable_details">Local sync metadata could not be read. Avoid clearing app data.</string>
+    <string name="sync_status_upload_error">Cloud upload needs attention</string>
+    <string name="sync_status_upload_error_details">Pending operations: %1$d\nLast error: %2$s\nYour local transaction records are retained.</string>
+    <string name="sync_status_uploads_pending">Uploads pending</string>
+    <string name="sync_status_uploads_pending_details">%1$d change(s) are saved locally and waiting for Firebase acknowledgement. Try Retry Upload if connected.</string>
+    <string name="sync_status_no_pending">No pending uploads</string>
+    <string name="sync_status_no_pending_details">All queued local changes have been acknowledged or there are no local changes to upload.</string>
+    <string name="sync_status_unavailable">Sync status unavailable</string>
+    <string name="sync_status_unavailable_details">The status could not be read. Local data was not changed.</string>
+
+    <!-- Transaction entry: Android resource quoting preserves the original spacing -->
+    <string name="transaction_selected_date">"▣   %1$s        ▾"</string>
+
+
+
+    <!-- Dashboard text moved from activity_main.xml; visible wording/icons unchanged. -->
+    <string name="dashboard_brand_icon" translatable="false">▥</string>
+    <string name="dashboard_notifications_icon" translatable="false">♧</string>
+    <string name="dashboard_profile_icon" translatable="false">●</string>
+    <string name="dashboard_balance_icon" translatable="false">▣</string>
+    <string name="dashboard_income_arrow_icon" translatable="false">↓</string>
+    <string name="dashboard_total_income">Total Income</string>
+    <string name="dashboard_expense_arrow_icon" translatable="false">↑</string>
+    <string name="dashboard_total_expense">Total Expense</string>
+    <string name="dashboard_income_breakdown_title">"◴  Income Breakdown"</string>
+    <string name="dashboard_income_breakdown_subtitle">Track your income by source and time period</string>
+    <string name="dashboard_period_this_month">This Month</string>
+    <string name="dashboard_period_this_year">This Year</string>
+    <string name="dashboard_period_total">Total</string>
+    <string name="dashboard_highest_category_icon" translatable="false">♛</string>
+    <string name="dashboard_highest_income_title">Highest Income Category</string>
+    <string name="dashboard_no_income">No income yet</string>
+    <string name="dashboard_percent_of_total_zero" formatted="false">0% of total</string>
+    <string name="dashboard_all_income_sources">"▱   All Income Sources"</string>
+    <string name="dashboard_chevron_icon" translatable="false">›</string>
+    <string name="dashboard_expense_breakdown_title">"◴  Expense Breakdown"</string>
+    <string name="dashboard_expense_breakdown_subtitle">Track your expenses by category and time period</string>
+    <string name="dashboard_highest_expense_title">Highest Expense Category</string>
+    <string name="dashboard_no_expense">No expenses yet</string>
+    <string name="dashboard_all_expenses">"▱   All Expenses"</string>
+    <string name="dashboard_recent_transactions_title">"◴  Recent Transactions"</string>
+    <string name="dashboard_view_all_with_arrow">"View All  ›"</string>
+    <string name="dashboard_recent_empty_combined">"No transactions yet\nAdd your first transaction to get started"</string>
+    <string name="dashboard_add_transaction_cta">"＋  Add Transaction"</string>
+    <string name="dashboard_add_transaction_hint">(Income / Expense)</string>
+    <string name="dashboard_nav_home">"⌂\nHome"</string>
+    <string name="dashboard_nav_transactions">"☷\nTransactions"</string>
+    <string name="dashboard_nav_reports">"▥\nReports"</string>
+    <string name="dashboard_nav_settings">"⚙\nSettings"</string>
+    <string name="dashboard_logo_content_description">SpendWise logo</string>
+    <string name="dashboard_notifications_content_description">Notifications</string>
+    <string name="dashboard_profile_content_description">Profile menu</string>
 
 </resources>

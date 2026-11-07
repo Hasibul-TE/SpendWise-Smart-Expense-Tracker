@@ -44,9 +44,12 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
 
+    implementation("androidx.core:core-splashscreen:1.2.0")
+
     // Firebase libraries use compatible versions
     implementation(platform("com.google.firebase:firebase-bom:35.1.0"))
-
     // Firebase Authentication
     implementation("com.google.firebase:firebase-auth")
+    // Firebase Realtime Database.
+    implementation("com.google.firebase:firebase-database")
 }

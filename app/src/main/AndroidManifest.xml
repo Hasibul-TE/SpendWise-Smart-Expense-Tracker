@@ -32,10 +32,38 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
+        <!-- Transaction entry: Income and Expense -->
+        <activity
+            android:name=".TransactionEntryActivity"
+            android:exported="false" />
+
+        <!-- Transaction history, details, edit and delete -->
+        <activity
+            android:name=".TransactionHistoryActivity"
+            android:exported="false" />
+
+        <!-- Income and Expense Breakdown screens -->
+        <activity
+            android:name=".BreakdownActivity"
+            android:exported="false" />
+
+        <!-- Settings, profile, camera/gallery and device features -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <!-- Income, expense reports and monthly charts -->
+        <activity
+            android:name=".ReportsActivity"
+            android:exported="false" />
+
+
+
         <!-- First screen shown when the app starts -->
         <activity
-            android:name="com.alard.spendwise.SplashActivity"
-            android:exported="true">
+            android:name="com.alard.spendwise.SessionRouterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SpendWise.Starting">
 
             <!-- Sets SplashActivity as the launcher activity -->
             <intent-filter>

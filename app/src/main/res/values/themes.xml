@@ -26,11 +26,30 @@
 
         <!-- Navigation bar -->
         <item name="android:navigationBarColor">@color/background</item>
-        <item name="android:windowLightNavigationBar">false</item>
 
         <!-- Window background -->
         <item name="android:windowBackground">@color/background</item>
 
     </style>
+
+
+    <!-- AndroidX Splash Screen launch theme -->
+    <style name="Theme.SpendWise.Starting"
+        parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">
+            @color/background
+        </item>
+
+        <item name="windowSplashScreenAnimatedIcon">
+            @mipmap/ic_launcher
+        </item>
+
+        <item name="postSplashScreenTheme">
+            @style/Theme.SpendWise
+        </item>
+
+    </style>
+
 
 </resources>
